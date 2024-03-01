@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Roboto:wght@400;700;900&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    user-zoom: fixed;
+}
+
+.startingWatchLaterDiv {
+    width: 100%;
+    padding-top: 10rem;
+    display: grid;
+    place-items: center;
+}
+.componentName{
+    color: #e1e6f0;
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    user-select: none;
+}
+.mainWatchLater {
+    background: rgb(95, 79, 79, .4);
+    margin: 5px;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    width: 70%;
+    box-shadow: 2px 2px 5px #5b5656;
+}
+
+/* box-shadow: 2px 2px 5px #d64b4b; */
+.WatchLaterImgDiv {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.WatchLaterImgDiv>img {
+    width: 300px;
+    height: 150px;
+    margin: 5px 0 5px 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.WatchLaterMovieInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.WatchLaterMovieTitle {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.watchLaterButn {
+    margin-right: 2rem;
+}
+
+.watchLaterButn .watchLaterMovieButton {
+    background: #0f56de;
+    margin-right: 5px;
+}
+
+.watchLaterButn button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* media query start here  */
+/* @media query (min-width: 1025px) and (max-width: 1440px) start here css */
+@media (min-width: 1125px) and (max-width: 1440px) {
+    .WatchLaterMovieTitle {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1125px) {
+    .WatchLaterMovieTitle {
+        font-size: 18px;
+    }
+
+    .watchLaterButn {
+        margin-right: 1rem;
+    }
+
+    /* .watchLaterButn>.watchLaterMovieButton {
+        background: #0f56de;
+        margin-right: 5px;
+    } */
+
+    .watchLaterButn>button {
+        padding: 8px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width:920px) and (max-width:1000px) {
+    .WatchLaterImgDiv>img {
+        width: 244px;
+        margin: 5px 0 5px 1rem;
+    }
+
+    .WatchLaterMovieTitle {
+        font-size: 18px;
+    }
+
+    .watchLaterButn {
+        margin-right: 1rem;
+    }
+
+    .watchLaterButn>button {
+        padding: 8px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width:800px) and (max-width:920px) {
+    .WatchLaterMovieInfo {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .movieName {
+        display: grid;
+        align-self: end;
+        margin-left: 1rem;
+    }
+
+    .WatchLaterImgDiv>img {
+        width: 230px;
+        height: 140px;
+        margin: 5px 0 5px 1rem;
+    }
+
+    .WatchLaterMovieTitle {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+    .mainWatchLater {
+        display: block;
+        height: 250px;
+    }
+
+    .WatchLaterImgDiv {
+        height: 150px;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+    }
+
+    .WatchLaterImgDiv>img {
+        width: 450px;
+        height: 170px;
+        margin: 10px 0;
+    }
+
+    .WatchLaterMovieInfo {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 2.5rem;
+        padding: 0 0 0 2rem;
+    }
+
+    .watchLaterButn {
+        margin-right: 2.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .mainWatchLater {
+        display: block;
+        height: 250px;
+    }
+
+    .WatchLaterImgDiv {
+        height: 150px;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+    }
+
+    .WatchLaterImgDiv>img {
+        width: 65vw;
+        height: 170px;
+        margin: 10px 0;
+    }
+
+    .WatchLaterMovieInfo {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 2.5rem;
+        padding: 0 0 0 2rem;
+    }
+
+    .watchLaterButn {
+        margin-right: 2.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .mainWatchLater {
+        height: 300px;
+    }
+
+    .WatchLaterMovieInfo {
+        display: block;
+        margin-top: 3rem;
+    }
+
+    .movieName {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* media query end here */
+
+
+/* Watch History Css heading start here */
+.watchHistory_Heading {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top:4rem;
+    z-index: -1;
+}
+.watchHistory_Heading span:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+@media (max-width:450px){
+    .watchHistory_Heading{
+        font-size:20px;
+    }
+}
+/* Watch History Css heading end here  */

@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background: linear-gradient(135deg, #000000, #111111, #000000) !important;
+    background-attachment: fixed;
+    background-size: cover; */
+    user-select: none;
+}
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --digital-red: #ff0000;
+    --digital-black: #000000;
+    --digital-mix: rgba(0, 0, 0, .1);
+    --box-shadow: -1px 4px 24px 2px rgba(255, 255, 255, 0.1);
+    --text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.9), -2px 2px 3px rgba(255, 255, 255, 0.5);
+    --Episodes-color: #fff;
+    --play-button-color: #fff;
+}
+
+.Dynamic_MainDiv {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.Dark_Overlay {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Dynamic_MoiveImage css start here  */
+.Dynamic_MovieImage {
+    width: 100%;
+    height: 100%;
+}
+
+.Dynamic_MovieImage>img {
+    width: 100%;
+    height: 45rem !important;
+    z-index: -1;
+}
+
+/* Dynamic_MovieImage css end here  */
+/* Movie Name css start here  */
+.Dynamic_Movie_Name {
+    z-index: 2;
+    position: absolute;
+    top: 53%;
+    left: 2.7rem;
+    font-family: var(--font-family);
+}
+
+.Dynamic_Movie_Name>h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    background: url('https://texturelabs.org/wp-content/uploads/Texturelabs_InkPaint_330thumbnail.jpg');
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+}
+
+.Dynamic_Movie_Name>p {
+    color: #fff;
+    user-select: none;
+}
+
+/* Movie Name css end here  */
+/* Movie Discription css start here */
+.Dynamic_Movie_Discription {
+    z-index: 2;
+    position: absolute;
+    top: 65%;
+    left: 2.7rem;
+    width: 45rem;
+    font-family: var(--font-family);
+
+}
+
+.Dynamic_Movie_Discription>p {
+    color: #fff;
+    text-shadow: var(--text-shadow);
+}
+
+.Dynamic_Movie_Discription>.Movie_Language {
+    margin-top: 15px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+/* Movie Discription css end   here */
+/*watch  button css start here  */
+.Watch_Button {
+    position: absolute;
+    top: 85%;
+    left: 2.5rem;
+    z-index: 2;
+}
+
+.Watch_Button .Watch_Movie .Watch_Movie_Button,
+.Watch_Button .Watch_Trailer .Watch_Trailer_Button {
+    outline: none;
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 3px 0 3px;
+    background: var(--digital-mix);
+    font-family: var(--font-family);
+    border: 1px solid rgb(203, 78, 78);
+    box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.3);
+
+}
+
+.Watch_Button .Watch_Movie .Watch_Movie_Button .Watch_Movie_Link,
+.Watch_Button .Watch_Trailer .Watch_Trailer_Button .Watch_Trailer_Link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.Watch_Button .Watch_Movie .Watch_Movie_Button .Watch_Movie_Link>i,
+.Watch_Button .Watch_Trailer .Watch_Trailer_Button .Watch_Trailer_Link>i {
+    margin-right: 0.5rem;
+}
+
+/* watch button css end here */
+/* Image Bottom Dark css start here */
+.Bottom_Overlay {
+    position: absolute;
+    bottom: 0px;
+    height: 7.6rem;
+    background-image: linear-gradient(180deg, transparent, rgba(13, 13, 12, 0.61), #111);
+    width: 100%;
+    z-index: 1;
+}
+
+/* Image Bottom Dark css end here */
+/* DynamicDetailMoviePage Episodes css start here */
+.Dynamic_Episodes {
+    margin-top: 4rem;
+    margin-left: 3.1rem;
+}
+
+.Dynamic_Episodes>h2 {
+    color: var(--Episodes-color);
+    font-family: var(--font-family);
+}
+
+/* DynamicDetailMoviePage Episodes css end here */
+/* Episodes css start here  */
+.main_Episodes_Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+.Episodes_Image_Div {
+    width: 20rem;
+    height: 12rem;
+    margin: 2rem 2rem;
+    cursor: pointer;
+    position: relative !important;
+}
+
+.Episodes_Image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.Episodes_Image_Div:hover .Episodes_Image {
+    opacity: 0.2;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.Episodes_Number {
+    color: var(--Episodes-color);
+    text-align: center;
+}
+
+.Episodes_Title {
+    text-align: center;
+    color: var(--Episodes-color);
+}
+
+/* play button css start here */
+
+.playButton {
+    color: var(--play-button-color);
+    font-size: 1.5rem;
+    border: 1px solid var(--play-button-color);
+    padding: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.Episodes_Image_Div:hover .playButton {
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+/* play button css end here  */
+/* Episodes css end here  */
+/* Dynamic movie css start */
+.dynamicDetalMovieTrailerVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* media query start for 360px here  */
+@media (min-width:360px) and (max-width:463px) {
+    .Dynamic_MovieImage > img {
+        height: 25rem !important;
+      }
+    .Dynamic_Movie_Discription>p {
+        display: none;
+    }
+    .Dynamic_Movie_Name{
+        top:65%;
+    }
+    .Dynamic_Movie_Discription{
+        top:72%;
+    }
+    .Dynamic_Movie_Discription>.Movie_Language {
+        display: block;
+    }
+    .Dynamic_Movie_Name>h1 {
+        font-size: 2rem;
+        /* letter-spacing: 1px; */
+        white-space: nowrap;
+        font-weight: 800;
+    }
+}
+
+@media (max-width:360px) {
+    .Dynamic_MovieImage > img {
+        height: 25rem !important;
+      }
+    .Dynamic_Movie_Discription>p {
+        display: none;
+    }
+    .Dynamic_Movie_Name{
+        top:65%;
+    }
+    .Dynamic_Movie_Discription{
+        top:72%;
+    }
+    .Dynamic_Movie_Discription>.Movie_Language {
+        display: block;
+    }
+    .Dynamic_Movie_Name>h1 {
+        font-size: 2rem;
+        /* letter-spacing: 1px; */
+        white-space: nowrap;
+        font-weight: 800;
+    }
+}
+
+/* media query end for 360px here  */
+
+/* Dynamic movie css end  */

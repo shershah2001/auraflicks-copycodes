@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* background: linear-gradient(135deg, #000000, #111111, #000000) !important;
+    background-attachment: fixed;
+    background-size: cover; */
+    user-select: none;
+}
+
+/* Dynamic Link for All Movies css start here*/
+.DynamicLink_MoviesSlider {
+    text-decoration: none;
+}
+
+/* Dynamic Link for All Movies css end here */
+
+.Allmovies {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+}
+
+/* Movies_Slider  Heading css Start here */
+.movies_Heading h4 {
+    color: #e1e6f0;
+    position: absolute;
+    left: 1.2rem;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    user-select: none;
+}
+
+/* Movies_Slider Heading css end here */
+.movieSlider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.MovieSlider_Container {
+    transition: transform 1s ease-in-out;
+}
+
+.MovieContainer {
+    width: 17rem;
+    border-radius: 10px;
+    margin: 70px 16px;
+    height: 24rem;
+    box-shadow: -1px 3px 18px 0px rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    background-color: rgba(199, 197, 197, 0.1);
+    cursor: pointer;
+    position: relative;
+    transition: transform 1s ease-in-out;
+    user-select: none;
+}
+
+.MovieContainer:hover {
+    border: 2px solid rgb(207, 195, 195);
+    scale: 1.13;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 1s;
+}
+
+.moviesName {
+    color: #fff;
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+    padding-top: 0.2rem;
+}
+
+.All_Moviesimages {
+    object-fit: fill;
+    object-position: center top;
+    width: 100%;
+    height: 13rem;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.TrailerVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    height:13rem;
+}
+
+.leftArrowMovies {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateY(-45%);
+    background: rgba(0, 0, 0, 0.5);
+    width: 42px;
+    height: 134px;
+    color: rgba(255, 255, 255, 0.871);
+    font-size: 35px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 10000 !important;
+    opacity: 0;
+}
+
+.leftArrowMovies:active {
+    background: rgba(137, 78, 78, 0.5)
+}
+
+.rightArrowMovies {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translateY(-45%);
+    background: rgba(0, 0, 0, 0.5);
+    width: 42px;
+    height: 134px;
+    color: rgba(255, 255, 255, 0.871);
+    font-size: 35px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 10000 !important;
+    opacity: 0;
+    /* background:red !important; */
+}
+
+.Allmovies:hover .rightArrowMovies,
+.Allmovies:hover .leftArrowMovies {
+    opacity: 1;
+    transition: all 0.2s ease-in;
+}
+
+.rightArrowMovies:active {
+    background: rgba(137, 78, 78, 0.5)
+}
+
+/*Recolate Arrow Css start here */
+.ViewAll_Arrow {
+    opacity: 0;
+}
+
+.ViewAll_Arrow i {
+    color: #e1e6f0;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    transform: translate(-3%, -5%);
+    cursor: pointer;
+}
+
+.ViewAll_Arrow a span {
+    color: #e1e6f0;
+    position: absolute;
+    right: 3.5%;
+    top: 2%;
+    user-select: none;
+}
+
+.Allmovies:hover .ViewAll_Arrow {
+    opacity: 1;
+    transition: all 0.2s ease-in;
+}
+
+/* Recolate Arrow Css End here  */
+.play_plus_like_dislink_icons {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 0.5rem;
+}
+
+.play_plus_like_dislink_icons span {
+    margin: 0 3px;
+}
+
+.play_plus_like_dislink_icons span button {
+    padding: 0.5rem;
+    background: rgb(102, 95, 95);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.WatchLater>button {
+    background: rgb(74, 74, 74) !important;
+    color: rgb(211, 220, 161) !important;
+}
+
+.movieCardInfo {
+    color: #b0adad;
+    padding-left: 1rem;
+}
+
+.movieCardInfo>p {
+    font-size: 14.5px;
+    user-select: none;
+}
+
+/* @media query (min-width: 1441px) start here css  */
+@media (min-width: 1440px) {
+    .MovieContainer {
+        width: 17rem;
+        height: 24rem;
+    }
+}
+
+/* @media query (min-width: 1025px) and (max-width: 1440px) start here css */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .MovieContainer {
+        width: 16rem;
+        height: 24rem;
+    }
+}
+
+/* @media query (min-width: 1025px) and (max-width: 1440px) end here css  */
+/* @media query (min-width: 769px) and (max-width: 1024px) start here css */
+@media (min-width: 768px) and (max-width: 1025px) {
+
+    .MovieContainer {
+        width: 16rem;
+        height: 25rem;
+    }
+
+    .TrailerVideo {
+        width: 100% !important;
+    }
+
+    .MovieContainer:hover {
+        scale: 1.1;
+    }
+}
+
+/* @media query (min-width: 769px) and (max-width: 1024px) end here css  */
+/* @media query (min-width: 481px) and (max-width: 768px) css start here */
+@media (min-width: 667px) and (max-width: 768px) {
+    .MovieContainer {
+        width: 16rem;
+        height: 24rem;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+
+}
+
+/* @media query (min-width: 481px) and (max-width: 768px) css end here   */
+/* @media query (min-width: 482px) and (max-width:600px) start here */
+@media (min-width: 480px) and (max-width:667px) {
+
+    .MovieContainer {
+        width: 13.2rem;
+        height: 25rem;
+        margin-left: 18px !important;
+        margin-right: 6px !important;
+
+    }
+
+    .MovieContainer:hover {
+        scale: 1.1;
+    }
+}
+
+/* @media query (min-width: 482px) and (max-width:600px) end here  */
+/* @media query (min-width:361px) and (max-width:480px)  css start here */
+@media (min-width:462px) and (max-width:480px) {
+    .MovieContainer {
+        width: 13rem;
+        height: 24.5rem;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .MovieContainer:hover {
+        scale: 1.1;
+    }
+
+    .leftArrowMovies,
+    .rightArrowMovies {
+        display: none;
+    }
+
+    .All_Moviesimages {
+        width: 100%;
+        height: 12rem;
+    }
+
+    .TrailerVideo {
+        width: 100% !important;
+    }
+
+    .play_plus_like_dislink_icons span button {
+        padding: 0.65rem !important;
+        font-weight: 500 !important;
+    }
+}
+
+@media (min-width:360px) and (max-width:462px) {
+    .MovieContainer {
+        width: 6rem;
+        height: 8rem;
+        margin-right: 6px !important;
+        margin-left: 6px !important;
+        margin-top: 45px;
+        margin-bottom: 1.3rem;
+    }
+
+    .MovieSlider_Container {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .MovieContainer:hover {
+        border: none;
+        scale: none;
+    }
+
+    .All_Moviesimages {
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        object-fit: fill;
+    }
+
+    .play_plus_like_dislink_icons {
+        display: none;
+    }
+
+    .moviesName {
+        display: none;
+    }
+
+    .movieCardInfo {
+        display: none;
+    }
+
+    .leftArrowMovies,
+    .rightArrowMovies {
+        display: none;
+    }
+
+    .movies_Heading h4 {
+        font-size: 20px;
+    }
+
+    .ViewAll_Arrow a span {
+        right: 6%;
+    }
+
+}
+
+/*  @media query (min-width:361px) and (max-width:480px)  css end here  */
+/* @media query (min-width:240px) and (max-width:462px) start here */
+@media (min-width:240px) and (max-width:360px) {
+    .MovieSlider_Container {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .MovieContainer {
+        width: 6rem;
+        height: 8rem;
+        margin-right: 6px !important;
+        margin-left: 6px !important;
+        margin-top: 45px;
+        margin-bottom: 1.3rem;
+    }
+
+    .MovieContainer:hover {
+        border: none;
+        scale: none;
+    }
+
+    .All_Moviesimages {
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        object-fit: fill;
+    }
+
+    .play_plus_like_dislink_icons {
+        display: none;
+    }
+
+    .moviesName {
+        display: none;
+    }
+
+    .movieCardInfo {
+        display: none;
+    }
+
+    .movies_Heading h4 {
+        font-size: 20px;
+    }
+
+    .leftArrowMovies,
+    .rightArrowMovies {
+        display: none;
+    }
+
+    .ViewAll_Arrow {
+        opacity: 0;
+    }
+
+    .ViewAll_Arrow>a>span {
+        display: none !important;
+    }
+
+    .ViewAll_Arrow>a>i {
+        right: 4%;
+    }
+}
+
+/* watch later saved message css start here */
+
+
+.savedMessageDiv {
+    background: rgb(112, 111, 109);
+    width: 250px;
+    height: 3rem;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 2rem;
+    left: 2rem;
+    display: none;
+}
+
+.savedMessageDiv button {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: #101010;
+    border-radius: 10px;
+    border: none;
+    box-shadow: -3px 4px 10px 2px rgba(112, 113, 113, 0.39);
+}
+
+/* watch later saved message css end here */

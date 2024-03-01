@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* background: linear-gradient(135deg, #000000, #111111, #000000) !important;
+    background-attachment: fixed;
+    background-size: cover; */
+    user-select: none;
+}
+.MainFilter_Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.webseries_Heading {
+    margin-top:9rem;
+}
+/* Movies_Slider  Heading css Start here */
+.MapAllMovies_movies_Heading h3 {
+    color: #e1e6f0;
+    /* position: absolute;
+    top: 47rem;
+    left: 1.8rem; */
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    /* text-align: center; */
+    user-select: none;
+}
+
+/* Movies_Slider Heading css end here */
+.All_Movies_Card {
+    width: 17rem;
+    border-radius: 10px;
+    height: 24rem;
+    box-shadow: -1px 3px 18px 0px rgb(0, 0, 0);
+    margin-top: 25px;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: 2rem;
+    background-color: rgba(199, 197, 197, 0.1);
+    cursor: pointer;
+    position: relative;
+
+}
+
+.All_Movies_Card:hover {
+    border: 2px solid rgb(207, 195, 195);
+    scale: 1.13;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.moviesName {
+    color: #fff;
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+    padding-top: 0.2rem;
+    font-size: 18px;
+    user-select: none;
+}
+
+.All_Movies_Image {
+    object-fit: fill;
+    object-position: center top;
+    width: 100%;
+    height: 13rem;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+
+.TrailerVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+}
+
+.DynamicLink_MapAllMovies {
+    text-decoration: none;
+}
+/* css button for Watch movie and Watch Trailer start here*/
+.play_plus_like_dislink_icons {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 0.5rem;
+}
+
+.play_plus_like_dislink_icons span {
+    margin: 0 3px;
+}
+.play_plus_like_dislink_icons span button{
+   padding: 0.5rem;
+   background:rgb(102, 95, 95);
+   border:none;
+   outline:none;
+   color:#fff;
+   border-radius:5px;
+   font-weight:600;
+   cursor:pointer;
+}
+.WatchLater > button{
+    background:rgb(74, 74, 74) !important;
+    color:rgb(211, 220, 161) !important;
+}
+/* css button for Watch movie and Watch Trailer end here */
+@media (min-width:537px) and (max-width:1500px) {
+    .MapAllMovies_movies_Heading h3 {
+        text-align: center;
+        width: 90%;
+    }
+}
+
+@media (min-width:480px) and (max-width:537px) {
+    .MapAllMovies_movies_Heading h3 {
+        text-align: center;
+        width: 85%;
+
+    }
+}
+
+@media (min-width:360px) and (max-width:480px) {
+    .MapAllMovies_movies_Heading h3 {
+        text-align: center;
+        width: 85%;
+    }
+
+    .icons_MapAllMovies {
+        display: block !important;
+    }
+
+    .moviesName_MapAllMovies {
+        display: block !important;
+    }
+
+    .movieCardInfo_MapAllMovies {
+        display: block !important;
+    }
+}
+@media (max-width:360px){
+    .icons_MapAllMovies {
+        display: block !important;
+    }
+
+    .moviesName_MapAllMovies {
+        display: block !important;
+    }
+
+    .movieCardInfo_MapAllMovies {
+        display: block !important;
+    }
+}
