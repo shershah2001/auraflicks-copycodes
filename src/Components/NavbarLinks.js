@@ -226,6 +226,7 @@ const NavbarLinks = () => {
     // colorHandler css end here 
     return (
         <>
+        <h1>hello git hub what 's app</h1>
             <header className="header" >
                 <div className="hamburger-icon">
                     <i onClick={Show_HideNavbarHandler} class="fa fa-bars" aria-hidden="true"></i>
