@@ -10,7 +10,7 @@ const All_Movie_SliderData = [
         movieDiscription:"It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself...",
         videoSrc: "https://cdn.jwplayer.com/players/6ieuvVCM-Twc0KgD2.html",
     },
-   
+
     {
         id: 2,
         title: "AVATAR 2",

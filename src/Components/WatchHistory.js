@@ -4,6 +4,7 @@ import "../Style/WatchLater.css"
 import { NavLink } from 'react-router-dom'
 const WatchHistory = () => {
     const { state, dispatch } = useContext(userContext);
+    console.log('watchHistory=>',state)
     const removeHandler = (id, category) => {
         dispatch({
             type: "Remove_Movie_From_WatchHistory",
